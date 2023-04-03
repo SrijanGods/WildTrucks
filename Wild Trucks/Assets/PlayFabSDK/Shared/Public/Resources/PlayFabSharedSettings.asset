@@ -15,7 +15,7 @@ MonoBehaviour:
   TitleId: 887F6
   DeveloperSecretKey: X8Q16TDOH99KQXJ6COBNRNJNBCP789GI8OWG8ZG9FHSZCEU65I
   ProductionEnvironmentUrl: 
-  RequestType: 2
+  RequestType: 0
   DisableDeviceInfo: 0
   DisableFocusTimeCollection: 0
   RequestTimeout: 2000
