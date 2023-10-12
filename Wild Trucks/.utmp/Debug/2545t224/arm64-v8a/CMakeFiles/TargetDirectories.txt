@@ -1,0 +1,5 @@
+C:/Users/srija/OneDrive/Documents/UnityProjects/WildTrucks/Wild Trucks/.utmp/Debug/2545t224/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/srija/OneDrive/Documents/UnityProjects/WildTrucks/Wild Trucks/.utmp/Debug/2545t224/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/srija/OneDrive/Documents/UnityProjects/WildTrucks/Wild Trucks/.utmp/Debug/2545t224/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/Users/srija/OneDrive/Documents/UnityProjects/WildTrucks/Wild Trucks/.utmp/Debug/2545t224/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+C:/Users/srija/OneDrive/Documents/UnityProjects/WildTrucks/Wild Trucks/.utmp/Debug/2545t224/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

@@ -3,83 +3,160 @@ using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using PlayFab;
 using PlayFab.ClientModels;
-using PlayFab.PfEditor.EditorModels;
-using Mono.Cecil.Cil;
+//using Mono.Cecil.Cil;
 using PlayFabError = PlayFab.PlayFabError;
+using TMPro;
+using System.Collections;
+using Michsky.UI.ModernUIPack;
 
 public class LoginManager : MonoBehaviour
 {
+    public TextMeshProUGUI debugInfo;
+    public bool isDev;
+
+    public GameObject LoginPanel, LoadingPanel, MapScene;
+
+    public ProgressBar loadingBar;
+    public GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        PlayGamesPlatform.DebugLogEnabled = true;
-        PlayGamesPlatform.Activate();
+        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+
+        if (!gameManager.isLoggedIn)
+        {
+            PlayGamesPlatform.Activate();
+            PlayGamesPlatform.DebugLogEnabled = true;
+        }
+        
+    }
+
+    public void OnSignInButtonClicked()
+    {
+        if (isDev)
+        {
+
+            DebugLogin();
+
+        }
+        else
+        {
+            
+            PlayGamesPlatform.Activate();
+
+            PlayGamesPlatform.Instance.Authenticate(ProcessAuthentication);
+
+        }
+
     }
 
     internal void ProcessAuthentication(SignInStatus status)
     {
         if (status == SignInStatus.Success)
         {
-            // Continue with Play Games Services
-            Debug.Log("Success");
+            debugInfo.text = "Logging In";
+            LoginPanel.SetActive(false);
+            LoadingPanel.SetActive(true);
+            loadingBar.ChangeValue(50f);
+
+            string g = Social.localUser.id;
+            Social.localUser.Authenticate((bool success) => {
+
+                if (success)
+                {
+                    Debug.Log("Signed In");
+
+                    loadingBar.ChangeValue(35f);
+
+                    //var serverAuthCode;
+                    PlayGamesPlatform.Instance.RequestServerSideAccess(false, code =>
+                    {
+                        var serverAuthCode = code;
+
+                        
+
+                        PlayFabClientAPI.LoginWithGooglePlayGamesServices(new LoginWithGooglePlayGamesServicesRequest()
+                        {
+                            TitleId = PlayFabSettings.TitleId,
+                            ServerAuthCode = serverAuthCode,
+                            CreateAccount = true
+                        }, (result) =>
+                        {
+                            Debug.Log("Signed In as " + result.PlayFabId);
+                            OnLoginWithPlayfab();
+
+                        }, OnLoginWithGoogleAccountFailure);
+                    });
+
+
+                }
+                else
+                {
+                    Debug.Log("Google Failed to Authorize your login");
+                }
+
+            });
         }
         else
         {
-            Debug.Log(status);
-            // Disable your integration with Play Games Services or show a login button
-            // to ask users to sign-in. Clicking it should call
-            // PlayGamesPlatform.Instance.ManuallyAuthenticate(ProcessAuthentication).
+            debugInfo.text = status.ToString();
+            Debug.LogError(status);
         }
     }
-
-
-
-    public void OnSignInButtonClicked()
+    
+    private void DebugLogin() 
     {
-        PlayGamesPlatform.Activate();
+        loadingBar.ChangeValue(50f);
+        debugInfo.text = "Logging In";
+        //LoginPanel.SetActive(false);
+        LoadingPanel.SetActive(true);
 
-        PlayGamesPlatform.Instance.Authenticate(ProcessAuthentication);
+        PlayFabClientAPI.LoginWithAndroidDeviceID(new LoginWithAndroidDeviceIDRequest()
+        {
+            TitleId = PlayFabSettings.TitleId,
+            AndroidDeviceId = SystemInfo.deviceUniqueIdentifier,
+            CreateAccount = true
+        }, (result) =>
+        {
+            Debug.Log("Signed In as " + result.PlayFabId);
+            OnLoginWithPlayfab();
 
-        /*
-        Social.localUser.Authenticate((bool success) => {
-
-            if (success)
-            {
-                Debug.Log("Signed In");
-
-                //var serverAuthCode;
-                PlayGamesPlatform.Instance.RequestServerSideAccess(false, code =>
-                {
-                    var serverAuthCode = code;
-
-                    PlayFabClientAPI.LoginWithGoogleAccount(new LoginWithGoogleAccountRequest()
-                    {
-                        TitleId = PlayFabSettings.TitleId,
-                        ServerAuthCode = serverAuthCode,
-                        CreateAccount = true
-                    }, (result) =>
-                    {
-                        Debug.Log("Signed In as " + result.PlayFabId);
-
-                    }, OnLoginWithGoogleAccountFailure);
-                });
-
-                
-            }
-            else
-            {
-                Debug.Log("Google Failed to Authorize your login");
-            }
-
-        });
-        */
-
+        }, OnLoginWithGoogleAccountFailure);
     }
 
     private void OnLoginWithGoogleAccountFailure(PlayFabError error)
     {
         Debug.Log("PlayFab LoginWithGoogleAccount Failure: " + error.GenerateErrorReport());
+
+        debugInfo.text = "Failed: " + error.GenerateErrorReport();
+
+        StartCoroutine(failedLogin());
+        
+
     }
 
+    private IEnumerator failedLogin()
+    {
+        yield return new WaitForSeconds(4);
+        LoginPanel.SetActive(true);
+        LoadingPanel.SetActive(false);
+    }
+
+    private void OnLoginWithPlayfab()
+    {
+        gameManager.MainMenuLoaded();
+        loadingBar.ChangeValue(95f);
+
+        debugInfo.text = "Loading Game";
+        
+        gameManager.isLoggedIn = true;
+        
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 
 }

@@ -22,7 +22,7 @@ public class TruckCollision : MonoBehaviour
             {
                 other.transform.GetComponent<Jump>().isSideColl = true;
             }
-            other.transform.GetComponent<PlayerPhysics>().SetRigidbody(transform.parent.gameObject);
+            //other.transform.GetComponent<PlayerPhysics>().SetRigidbody(transform.parent.gameObject);
         }
         if (other.tag == "Collider")
         {
@@ -34,7 +34,7 @@ public class TruckCollision : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.transform.GetComponent<Jump>().isAttached = true;
+            //other.transform.GetComponent<Jump>().isAttached = true;
         }
         if (other.tag == "Collider")
         {
@@ -46,7 +46,7 @@ public class TruckCollision : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.transform.GetComponent<Jump>().isAttached = false;
+            //other.transform.GetComponent<Jump>().isAttached = false;
             //other.transform.SetParent(null);
 
             otherP = other.transform;
@@ -55,7 +55,7 @@ public class TruckCollision : MonoBehaviour
                 other.transform.GetComponent<Jump>().isSideColl = false;
             }
 
-            other.transform.GetComponent<PlayerPhysics>().SetRigidbody(transform.parent.gameObject);
+            //other.transform.GetComponent<PlayerPhysics>().SetRigidbody(transform.parent.gameObject);
             
         }
         if (other.tag == "Collider")

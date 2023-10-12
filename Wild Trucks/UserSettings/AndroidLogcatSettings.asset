@@ -1,5 +1,5 @@
 {
-    "m_SelectedDeviceId": "",
+    "m_SelectedDeviceId": "d3320cee",
     "m_SelectedPackage": {
         "deviceId": "",
         "name": "",
@@ -7,7 +7,86 @@
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [],
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "d3320cee",
+            "name": "com.TelepathyStudios.MadTrucks",
+            "processId": 30366,
+            "exited": true
+        },
+        {
+            "deviceId": "d3320cee",
+            "name": "com.TelepathyStudios.MadTrucks",
+            "processId": 31218,
+            "exited": true
+        },
+        {
+            "deviceId": "d3320cee",
+            "name": "com.TelepathyStudios.MadTrucks",
+            "processId": 628,
+            "exited": true
+        },
+        {
+            "deviceId": "d3320cee",
+            "name": "com.TelepathyStudios.MadTrucks",
+            "processId": 7071,
+            "exited": true
+        },
+        {
+            "deviceId": "d3320cee",
+            "name": "com.miui.home",
+            "processId": 2907,
+            "exited": false
+        },
+        {
+            "deviceId": "d3320cee",
+            "name": "com.TelepathyStudios.MadTrucks",
+            "processId": 23909,
+            "exited": false
+        },
+        {
+            "deviceId": "d3320cee",
+            "name": "com.TelepathyStudios.MadTrucks",
+            "processId": 24931,
+            "exited": false
+        },
+        {
+            "deviceId": "d3320cee",
+            "name": "com.TelepathyStudios.MadTrucks",
+            "processId": 26499,
+            "exited": false
+        },
+        {
+            "deviceId": "d3320cee",
+            "name": "com.TelepathyStudios.MadTrucks",
+            "processId": 19475,
+            "exited": false
+        },
+        {
+            "deviceId": "d3320cee",
+            "name": "com.TelepathyStudios.MadTrucks",
+            "processId": 13453,
+            "exited": false
+        },
+        {
+            "deviceId": "d3320cee",
+            "name": "com.TelepathyStudios.MadTrucks",
+            "processId": 30101,
+            "exited": false
+        },
+        {
+            "deviceId": "d3320cee",
+            "name": "com.TelepathyStudios.MadTrucks",
+            "processId": 5928,
+            "exited": false
+        },
+        {
+            "deviceId": "d3320cee",
+            "name": "com.TelepathyStudios.MadTrucks",
+            "processId": 6345,
+            "exited": false
+        }
+    ],
     "m_Tags": {
         "m_Entries": [
             {
@@ -41,9 +120,20 @@
         ]
     },
     "m_MemoryViewerState": {
-        "MemoryWindowHeight": 0.0,
-        "MemoryWindowWidth": 0.0,
-        "MemoryTypeEnabled": [],
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
         "MemoryGroup": 2,
         "Behavior": 0
     },

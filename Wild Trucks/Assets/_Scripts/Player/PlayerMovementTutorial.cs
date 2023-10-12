@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
 
@@ -8,9 +7,7 @@ public class PlayerMovementTutorial : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed;
-    public float maxSpeed;
-    public float groundDrag;
-
+    public float speedMultiplier;
     public float jumpForce;
     public float jumpCooldown;
     public float airMultiplier;
@@ -27,6 +24,15 @@ public class PlayerMovementTutorial : MonoBehaviour
 
     public Transform orientation;
 
+    [Header("Debug Tools")]
+    public TextMeshProUGUI stats;
+
+    [Header("UI")]
+    public GameObject deathPanel;
+    public GameObject winPanel;
+    public Button restartButton;
+    public Button nextLevelButton;
+
     FixedJoystick fixedJoystick;
 
     float horizontalInput;
@@ -37,11 +43,14 @@ public class PlayerMovementTutorial : MonoBehaviour
     Rigidbody rb;
 
     LevelManager levelManager;
+    GameManager gameManager;
 
     int mSpeed;
 
     private void Start()
     {
+        Application.targetFrameRate = 60;
+
         rb = GetComponent<Rigidbody>();
         //rb.freezeRotation = true;
 
@@ -50,7 +59,12 @@ public class PlayerMovementTutorial : MonoBehaviour
         fixedJoystick = GameObject.FindGameObjectWithTag("JoyStick").GetComponent<FixedJoystick>();
 
         levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
-        maxSpeed = levelManager.maxSpeed;
+        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        mSpeed = levelManager.maxSpeed;
+
+        restartButton.onClick.AddListener(gameManager.restartGame);
+        nextLevelButton.onClick.AddListener(gameManager.nextLevel);
+
         
     }
 
@@ -62,6 +76,7 @@ public class PlayerMovementTutorial : MonoBehaviour
         MyInput();
         SpeedControl();
 
+        stats.text = "Speed:" + rb.velocity.magnitude +"\n" + "Grounded:" + grounded;
         /*
         if (grounded)
             rb.drag = groundDrag;
@@ -100,17 +115,31 @@ public class PlayerMovementTutorial : MonoBehaviour
     {
         // calculate movement direction
         if (grounded)
-            moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput / 3;
+        {
+            moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput/3;
+        }
         else
-            moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        {
+            moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput/3;
+        }
 
         // on ground
         if (grounded)
-            rb.AddRelativeForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+        {
+            /*if (rb.velocity.magnitude < mSpeed * 0.7)
+                rb.AddRelativeForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+            else*/
+            float multy = 5;
+
+            rb.AddRelativeForce(moveDirection.normalized * moveSpeed * speedMultiplier * 10f, ForceMode.Force);
+        }
 
         // in air
-        else if(!grounded)
-            rb.AddRelativeForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+        else if (!grounded)
+            if (rb.velocity.magnitude < mSpeed * 0.7)
+                rb.AddRelativeForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+            else
+                rb.AddRelativeForce(moveDirection.normalized * moveSpeed * speedMultiplier * 10f, ForceMode.Force);
     }
 
     private void SpeedControl()
@@ -118,13 +147,13 @@ public class PlayerMovementTutorial : MonoBehaviour
         Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
         //print(flatVel.magnitude);
         // limit velocity if needed
-        if(flatVel.magnitude > maxSpeed)
+        /*if(flatVel.magnitude > maxSpeed)
         {
-            /*print("Hmm");
+            print("Hmm");
             Vector3 limitedVel = flatVel.normalized * moveSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
             */
-        }
+        
     }
 
     private void Jump()
@@ -133,9 +162,31 @@ public class PlayerMovementTutorial : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+        rb.AddForce(transform.forward * jumpForce, ForceMode.Impulse);
     }
     private void ResetJump()
     {
         readyToJump = true;
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if(collision.gameObject.tag == "Death")
+        {
+            gameManager.PauseGame();
+            if (collision.gameObject.name == "Finish")
+            {
+                winPanel.SetActive(true);
+                return;
+            }
+
+            deathPanel.SetActive(true);
+
+        }
+    }
+
+    public void HomeScreen()
+    {
+        gameManager.nextLevel();
     }
 }
