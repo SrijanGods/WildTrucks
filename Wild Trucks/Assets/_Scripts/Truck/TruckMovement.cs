@@ -10,7 +10,10 @@ public class TruckMovement : MonoBehaviour
 
     public bool collided;
 
-    public int speed; 
+    public int speed;
+
+    public int MovementSpeed;
+
     // Start is called before the first frame update
     void Start()
     {

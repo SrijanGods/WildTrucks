@@ -23,6 +23,9 @@ public class TruckPathFollow : MonoBehaviour
 
     Rigidbody rb;
 
+    [HideInInspector]
+    public Vector3 movementSpeed;
+
     private void Start()
     {
         //GetComponent<Rigidbody>().centerOfMass = COM.transform.position;
@@ -50,8 +53,9 @@ public class TruckPathFollow : MonoBehaviour
     {
         WheelAngle();
 
+        movementSpeed = rb.velocity;
 
-        if (rb.velocity.magnitude <= mSpeed)
+        if (rb.velocity.magnitude <= 60f)
         {
             Drive();
         }

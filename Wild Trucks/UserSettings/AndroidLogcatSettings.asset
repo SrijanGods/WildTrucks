@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "d3320cee",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "d3320cee",
+        "name": "com.TelepathyStudios.MadTrucks",
+        "processId": 11779,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -84,6 +84,12 @@
             "deviceId": "d3320cee",
             "name": "com.TelepathyStudios.MadTrucks",
             "processId": 6345,
+            "exited": false
+        },
+        {
+            "deviceId": "d3320cee",
+            "name": "com.TelepathyStudios.MadTrucks",
+            "processId": 11779,
             "exited": false
         }
     ],

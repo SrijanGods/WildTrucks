@@ -100,7 +100,8 @@ namespace Tayx.Graphy.Utils.NumString
         {
             if (value < 0 && -value <= m_negativeBuffer.Length)
             {
-                return m_negativeBuffer[-value - 1];
+                //return m_negativeBuffer[-value - 1];
+                return null;
             }
 
             if (value >= 0 && value < m_positiveBuffer.Length)

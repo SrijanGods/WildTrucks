@@ -316,7 +316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8811930606831229264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4224,7 +4224,49 @@ MonoBehaviour:
   speedMultiplier: 1.5
   jumpForce: 6.7
   jumpCooldown: 0
-  airMultiplier: 0.6
+  airMultiplier: 0.2
+  speedVTime:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0038321475
+      value: 3.0575151
+      inSlope: 0.28134495
+      outSlope: 0.28134495
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 25.080107
+      value: 10.112598
+      inSlope: 0.13168664
+      outSlope: 0.13168664
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.11112842
+    - serializedVersion: 3
+      time: 57.02011
+      value: 14.109464
+      inSlope: 0.011185596
+      outSlope: 0.011185596
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.2244436
+    - serializedVersion: 3
+      time: 100
+      value: 14.242489
+      inSlope: 0.0024285226
+      outSlope: 0.0024285226
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.24068992
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   walkSpeed: 0
   sprintSpeed: 0
   playerHeight: 3.53

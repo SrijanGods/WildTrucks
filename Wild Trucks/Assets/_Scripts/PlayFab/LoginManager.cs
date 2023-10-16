@@ -154,6 +154,12 @@ public class LoginManager : MonoBehaviour
         
     }
 
+    public void LoadLevel(string levelName)
+    {
+        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        gameManager.LoadLevel(levelName);
+    }
+
     public void Quit()
     {
         Application.Quit();
