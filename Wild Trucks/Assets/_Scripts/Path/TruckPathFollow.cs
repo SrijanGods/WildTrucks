@@ -10,6 +10,7 @@ public class TruckPathFollow : MonoBehaviour
     public WheelCollider FL;
     public WheelCollider FR;
     public GameObject COM;
+    public int maxSpeed;
     [Space, HideInInspector]
     public GameObject path;
 
@@ -19,7 +20,7 @@ public class TruckPathFollow : MonoBehaviour
     private int nodeLength;
 
     LevelManager levelManager;
-    int mSpeed;
+    
 
     Rigidbody rb;
 
@@ -44,25 +45,28 @@ public class TruckPathFollow : MonoBehaviour
         }
 
         levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
-        mSpeed = levelManager.maxSpeed;
+        maxSpeed = levelManager.maxSpeed;
 
         rb = gameObject.GetComponent<Rigidbody>();
+        //rb.centerOfMass = COM.transform.position;
+
     }
 
     private void FixedUpdate()
     {
+        
         WheelAngle();
 
         movementSpeed = rb.velocity;
 
-        if (rb.velocity.magnitude <= 60f)
+        if (rb.velocity.magnitude <= maxSpeed)
         {
             Drive();
         }
         else
         {
             Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-            Vector3 limitedVel = flatVel.normalized * mSpeed;
+            Vector3 limitedVel = flatVel.normalized * maxSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
         }
 
@@ -71,11 +75,22 @@ public class TruckPathFollow : MonoBehaviour
 
     void WheelAngle()
     {
+        /*
         Vector3 relVec = transform.InverseTransformPoint(nodes[currentNode].position);
         float newSteer = (relVec.x / relVec.magnitude) * maxSteerAngle;
+        Debug.LogError(newSteer);
 
         FL.steerAngle = newSteer;
         FR.steerAngle = newSteer;
+        */
+
+        Vector3 nodeRelP = nodes[currentNode].position - transform.position;
+        Vector3 ourPos = transform.forward;
+
+        float newSteer = Vector3.SignedAngle(nodeRelP, ourPos, Vector3.up);
+        //Debug.Log(newSteer);
+        FL.steerAngle = -newSteer;
+        FR.steerAngle = -newSteer;
 
     }
 
@@ -95,5 +110,12 @@ public class TruckPathFollow : MonoBehaviour
                 currentNode++;
             }
         }
+    }
+
+    void TruckDeath()
+    {
+        gameObject.GetComponent<TruckPathFollow>().enabled = false;
+        rb.mass = 1;
+        rb.drag = 0;
     }
 }

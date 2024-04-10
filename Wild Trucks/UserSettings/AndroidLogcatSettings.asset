@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "d3320cee",
+    "m_SelectedDeviceId": "192.168.1.3:5555",
     "m_SelectedPackage": {
-        "deviceId": "d3320cee",
+        "deviceId": "192.168.1.3:5555",
         "name": "com.TelepathyStudios.MadTrucks",
-        "processId": 11779,
+        "processId": 31583,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -90,6 +90,18 @@
             "deviceId": "d3320cee",
             "name": "com.TelepathyStudios.MadTrucks",
             "processId": 11779,
+            "exited": false
+        },
+        {
+            "deviceId": "192.168.1.3:5555",
+            "name": "com.TelepathyStudios.MadTrucks",
+            "processId": 29249,
+            "exited": false
+        },
+        {
+            "deviceId": "192.168.1.3:5555",
+            "name": "com.TelepathyStudios.MadTrucks",
+            "processId": 31583,
             "exited": false
         }
     ],

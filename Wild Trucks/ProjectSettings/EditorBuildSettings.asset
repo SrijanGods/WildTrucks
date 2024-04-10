@@ -10,7 +10,16 @@ EditorBuildSettings:
     guid: 1e2fd591ee9e4e24a9409faac9cfe18a
   - enabled: 1
     path: Assets/_Scenes/Desert/DesertL1.unity
-    guid: a29cbeb915603fc43bc8d3dd44e0fb4c
+    guid: ad78cba7044184545afb7e7913f1c498
+  - enabled: 1
+    path: Assets/_Scenes/Desert/DesertL2.unity
+    guid: 215bab718bfa91441b911ae4ea2242a8
+  - enabled: 1
+    path: Assets/_Scenes/Desert/DesertL3.unity
+    guid: ba052f8a733844747bdce13abe00642a
+  - enabled: 1
+    path: Assets/_Scenes/Desert/DesertL4.unity
+    guid: 3f15306c5a7fdea45b6322c5d38e3efc
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 1e7d7f54249bf6e42add96a29c17612e, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 0171154e189c6124cafcd00fb02d5ab1, type: 2}

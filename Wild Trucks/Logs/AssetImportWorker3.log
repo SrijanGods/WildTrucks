@@ -1,0 +1,701 @@
+Using pre-set license
+Built from '2023.1/staging' branch; Version is '2023.1.0b10 (4d1d37b14308) revision 5053751'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26100) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 15713 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2023.1.0b10\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+C:/Users/srija/OneDrive/Documents/UnityProjects/WildTrucks/Wild Trucks
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+55088
+Successfully changed project path to: C:/Users/srija/OneDrive/Documents/UnityProjects/WildTrucks/Wild Trucks
+C:/Users/srija/OneDrive/Documents/UnityProjects/WildTrucks/Wild Trucks
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [788] Host "[IP] 192.168.1.8 [Port] 0 [Flags] 2 [Guid] 301649418 [EditorId] 301649418 [Version] 1048832 [Id] WindowsEditor(7,Gods-Lappy) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [788] Host "[IP] 192.168.1.8 [Port] 0 [Flags] 2 [Guid] 301649418 [EditorId] 301649418 [Version] 1048832 [Id] WindowsEditor(7,Gods-Lappy) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Library Redirect Path: Library/Refreshing native plugins compatible for Editor in 38.80 ms, found 13 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2023.1.0b10 (4d1d37b14308)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2023.1.0b10/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/srija/OneDrive/Documents/UnityProjects/WildTrucks/Wild Trucks/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3050 Ti Laptop GPU (ID=0x25a0)
+    Vendor:   NVIDIA
+    VRAM:     3977 MB
+    Driver:   31.0.15.4680
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2023.1.0b10/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2023.1.0b10/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2023.1.0b10/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56368
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.1.0b10/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.1.0b10/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.003759 seconds.
+- Loaded All Assemblies, in  0.347 seconds
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 351 ms
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.674 seconds
+Domain Reload Profiling: 1020ms
+	BeginReloadAssembly (113ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (141ms)
+		LoadAssemblies (112ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (136ms)
+			TypeCache.Refresh (135ms)
+				TypeCache.ScanAssembly (125ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (674ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (634ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (444ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (7ms)
+			ProcessInitializeOnLoadAttributes (125ms)
+			ProcessInitializeOnLoadMethodAttributes (55ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.023 seconds
+Refreshing native plugins compatible for Editor in 22.11 ms, found 13 plugins.
+OnLevelWasLoaded was found on GameManager
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+GPGSUpgrader start
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+GooglePlayGames.Editor.GPGSUpgrader:.cctor () (at Assets/GooglePlayGames/com.google.play.games/Editor/GPGSUpgrader.cs:38)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/GooglePlayGames/com.google.play.games/Editor/GPGSUpgrader.cs Line: 38)
+
+GPGSUpgrader done
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+GooglePlayGames.Editor.GPGSUpgrader:.cctor () (at Assets/GooglePlayGames/com.google.play.games/Editor/GPGSUpgrader.cs:57)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/GooglePlayGames/com.google.play.games/Editor/GPGSUpgrader.cs Line: 57)
+
+Mono: successfully reloaded assembly
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  1.158 seconds
+Domain Reload Profiling: 2178ms
+	BeginReloadAssembly (304ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (47ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (38ms)
+	LoadAllAssembliesAndSetupDomain (633ms)
+		LoadAssemblies (393ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (340ms)
+			TypeCache.Refresh (300ms)
+				TypeCache.ScanAssembly (286ms)
+			ScanForSourceGeneratedMonoScriptInfo (26ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1158ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (861ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (90ms)
+			ProcessInitializeOnLoadAttributes (721ms)
+			ProcessInitializeOnLoadMethodAttributes (25ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 21.11 ms, found 13 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6393 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 240 unused Assets / (2.0 MB). Loaded Objects now: 6872.
+Memory consumption went from 262.3 MB to 260.3 MB.
+Total: 5.775800 ms (FindLiveObjects: 0.676700 ms CreateObjectMapping: 0.268700 ms MarkObjects: 4.232800 ms  DeleteObjects: 0.596600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 361257.085845 seconds.
+  path: Assets/_Enviroment/Paticle/sand.png
+  artifactKey: Guid(a949bdf0570893d41abfe23e29c52de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Enviroment/Paticle/sand.png using Guid(a949bdf0570893d41abfe23e29c52de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dfc52ab82c6b91cae4eb484d29f2059') in 0.076217 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/SearchSmallDownOn@2x.png
+  artifactKey: Guid(c5b36095078d8694ba9e3ae3fd867b2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/SearchSmallDownOn@2x.png using Guid(c5b36095078d8694ba9e3ae3fd867b2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd74204b36e371f049b5af3c3cb5636b6') in 0.013674 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/SearchSmallDownOff@2x.png
+  artifactKey: Guid(0c2aa48d028b3134dbbb5ceb57bff5ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/SearchSmallDownOff@2x.png using Guid(0c2aa48d028b3134dbbb5ceb57bff5ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45cb4cd498b84079a66e8d8682a880bc') in 0.017652 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Packages/com.unity.textmeshpro/Editor Resources/Textures/SectionHeader_Dark.psd
+  artifactKey: Guid(fb5730e24283d0c489e5c7d0bee023d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.textmeshpro/Editor Resources/Textures/SectionHeader_Dark.psd using Guid(fb5730e24283d0c489e5c7d0bee023d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc5af702c8b074ef63a8282b2b690485') in 0.020176 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/SearchSmallDownOff.png
+  artifactKey: Guid(e0f8b9d001b669a43b3c9f7b90891d96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/SearchSmallDownOff.png using Guid(e0f8b9d001b669a43b3c9f7b90891d96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9032be0e9cfd8e79780b331e8a619820') in 0.014976 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/secondarytabclose.png
+  artifactKey: Guid(03cefa94d5aa9d74993fb2138af9d607) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/secondarytabclose.png using Guid(03cefa94d5aa9d74993fb2138af9d607) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75385be5f96c87d9828d03c6cbf11e86') in 0.031547 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.227503 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/1024px/Rounded Outline 1024px - 7x.png
+  artifactKey: Guid(014e4350c5916b14ea6b235afebcaec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/1024px/Rounded Outline 1024px - 7x.png using Guid(014e4350c5916b14ea6b235afebcaec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcaee07ab4ad5131f15390f507e8421c') in 0.031588 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/1024px/Rounded Outline 1024px - 10x.png
+  artifactKey: Guid(9badee22ad3256e44856c9d74e7b0b5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/1024px/Rounded Outline 1024px - 10x.png using Guid(9badee22ad3256e44856c9d74e7b0b5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40120170f1accea691d423077a0bb114') in 0.029324 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.024088 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/1024px/Rounded Outline 1024px - 1x.png
+  artifactKey: Guid(beb4ef4d122fefb44bdd1442367a8777) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/1024px/Rounded Outline 1024px - 1x.png using Guid(beb4ef4d122fefb44bdd1442367a8777) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3364f0fe0f409171990d079ef5f80f2') in 0.025278 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/1024px/Rounded Outline 1024px - 5x.png
+  artifactKey: Guid(30d40c185a062b040966d888d396fb0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/1024px/Rounded Outline 1024px - 5x.png using Guid(30d40c185a062b040966d888d396fb0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8969889cd5fe824d62bd2bdffe34e8c9') in 0.031943 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/1024px/Rounded Outline 1024px - 4x.png
+  artifactKey: Guid(71e78a161fb7e8d479095d6464e68407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/1024px/Rounded Outline 1024px - 4x.png using Guid(71e78a161fb7e8d479095d6464e68407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99ac31c75e608585203c8f80b555f844') in 0.028985 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.168224 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/512px/Rounded Outline 512px - 7x.png
+  artifactKey: Guid(9f406dc570f829a4e8265536c12ca9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/512px/Rounded Outline 512px - 7x.png using Guid(9f406dc570f829a4e8265536c12ca9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4733dd744e2d3f9d9e4dc905c660760') in 0.018992 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/512px/Rounded Outline 512px - 10x.png
+  artifactKey: Guid(96daee5178438474f980b8ec6dbbb2ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/512px/Rounded Outline 512px - 10x.png using Guid(96daee5178438474f980b8ec6dbbb2ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd03988baba15ec9544a187b752c14b52') in 0.022508 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/512px/Rounded Outline 512px - 1x.png
+  artifactKey: Guid(3f723d0c57d2be242b099d75109f59bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/512px/Rounded Outline 512px - 1x.png using Guid(3f723d0c57d2be242b099d75109f59bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '282cc49c68a5a74fefd5272de557c2e6') in 0.017295 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/512px/Rounded Outline 512px - 5x.png
+  artifactKey: Guid(4be7eec520aaf1842ac72027f8de8e0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/512px/Rounded Outline 512px - 5x.png using Guid(4be7eec520aaf1842ac72027f8de8e0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90c5aeb6ad46a751a6722cc2d229e24c') in 0.016800 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/256px/Rounded Outline 256px - 9x.png
+  artifactKey: Guid(fc7f96ee4f833fd4a94f39893c574012) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/256px/Rounded Outline 256px - 9x.png using Guid(fc7f96ee4f833fd4a94f39893c574012) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84647d7495cb79aece89ce48bc1c09ef') in 0.017828 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/256px/Rounded Outline 256px - 8x.png
+  artifactKey: Guid(07832ad64df4aba4ba2a91ff9d40be5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/256px/Rounded Outline 256px - 8x.png using Guid(07832ad64df4aba4ba2a91ff9d40be5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73e21ef03449d29cbbc01042364252d5') in 0.017962 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/256px/Rounded Outline 256px - 10x.png
+  artifactKey: Guid(9608a0ed55d16c540893ef0cf95628f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/256px/Rounded Outline 256px - 10x.png using Guid(9608a0ed55d16c540893ef0cf95628f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7ac9e76140a201843e77dfab3b3c6a4') in 0.018967 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/512px/Rounded Outline 512px - 4x.png
+  artifactKey: Guid(cc99984d167cfb5418a604596ecc2797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/512px/Rounded Outline 512px - 4x.png using Guid(cc99984d167cfb5418a604596ecc2797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30a164cfdad520dda3a89e25ba7f17ae') in 0.017843 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.110079 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/256px/Rounded Outline 256px - 2x.png
+  artifactKey: Guid(82efc156cd7ddc444933a146a27f0052) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/256px/Rounded Outline 256px - 2x.png using Guid(82efc156cd7ddc444933a146a27f0052) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffed37c22cc9c217b32085f14d2e7945') in 0.014348 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/256px/Rounded Outline 256px - 4x.png
+  artifactKey: Guid(b3390b5653435964fa30c6488e7ffc62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/256px/Rounded Outline 256px - 4x.png using Guid(b3390b5653435964fa30c6488e7ffc62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb8f7ba8059a770001de3ded9fd21e4c') in 0.017170 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Outline 128px - 6x.png
+  artifactKey: Guid(7b27b6bf2732b4f40838cac3e4dcecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Outline 128px - 6x.png using Guid(7b27b6bf2732b4f40838cac3e4dcecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc794c2cd1c5cf9304873fa62324325e') in 0.017329 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Outline 128px - 10x.png
+  artifactKey: Guid(31b0aae046fa7f442b3157da64d7a460) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Outline 128px - 10x.png using Guid(31b0aae046fa7f442b3157da64d7a460) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc026ebe1c93d9b6d18d5a28b47f82ca') in 0.017372 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Outline 128px - 8x.png
+  artifactKey: Guid(9250896c562fdb54093ca29f1494d52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Outline 128px - 8x.png using Guid(9250896c562fdb54093ca29f1494d52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '370dbeeef2fecdc665efdfcbe5a15e93') in 0.016073 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Outline 128px - 2x.png
+  artifactKey: Guid(06dec0b1685f62c4d85c8ecce2b95366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Outline 128px - 2x.png using Guid(06dec0b1685f62c4d85c8ecce2b95366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44fe4ef70dae046c3b97e96d7f79e63f') in 0.020443 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/64px/Rounded Outline 64px - 10x.png
+  artifactKey: Guid(7f1ec91c56e2aa64b97ee5ef57c15122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/64px/Rounded Outline 64px - 10x.png using Guid(7f1ec91c56e2aa64b97ee5ef57c15122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e91d29549ef7320fd5661871fb51fa0a') in 0.016203 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Outline 128px - 5x.png
+  artifactKey: Guid(9b971acfa0164c04a815dbe10f1b520f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Outline 128px - 5x.png using Guid(9b971acfa0164c04a815dbe10f1b520f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38b43460c031090c5e15ba82f1002f3f') in 0.018601 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Outline 128px - 1x.png
+  artifactKey: Guid(6f26b2434055f404d8d9c0b82e4de90f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Outline 128px - 1x.png using Guid(6f26b2434055f404d8d9c0b82e4de90f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2722c3786188750a3b2e2f2570f88e30') in 0.018500 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Outline 128px - 7x.png
+  artifactKey: Guid(3bc07bc36d00d0343bb07c6d2c26134a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Outline 128px - 7x.png using Guid(3bc07bc36d00d0343bb07c6d2c26134a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '853efb6ce0088f0bec15d74a694a19c2') in 0.018062 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.093108 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/64px/Rounded Outline 64px - 2x.png
+  artifactKey: Guid(04afe2bffe7002542ad7fb5dd55c6b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/64px/Rounded Outline 64px - 2x.png using Guid(04afe2bffe7002542ad7fb5dd55c6b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ffbce7b7056456f543455899f5589df') in 0.013827 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/64px/Rounded Outline 64px - 4x.png
+  artifactKey: Guid(a33db688e71d21649b0437503cff43e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/64px/Rounded Outline 64px - 4x.png using Guid(a33db688e71d21649b0437503cff43e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa006fffcde327970c90e1bc91954e44') in 0.015466 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/64px/Rounded Outline 64px - 3x.png
+  artifactKey: Guid(a9883ae0cbbf98a4daff51d5eb85b5aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/64px/Rounded Outline 64px - 3x.png using Guid(a9883ae0cbbf98a4daff51d5eb85b5aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb88bc28e26e0d90a891c9fd4f11bea8') in 0.013911 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/32px/Rounded Outline 32px - 7x.png
+  artifactKey: Guid(2ae02f309e37a7b468a607a66bbc4e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/32px/Rounded Outline 32px - 7x.png using Guid(2ae02f309e37a7b468a607a66bbc4e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9043e0b9cac75a8d1a253c1db153e1bd') in 0.019750 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/32px/Rounded Outline 32px - 10x.png
+  artifactKey: Guid(43bcf983afb7bef4c8e8b4ae39b82935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/32px/Rounded Outline 32px - 10x.png using Guid(43bcf983afb7bef4c8e8b4ae39b82935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f65a0027fec930d37790cd846f192cda') in 0.014215 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/32px/Rounded Outline 32px - 1x.png
+  artifactKey: Guid(c8a47b132ee4eff48bfeb344ad857e12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/32px/Rounded Outline 32px - 1x.png using Guid(c8a47b132ee4eff48bfeb344ad857e12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b1ba0c2477ff152ca3e421b0dfd57cc') in 0.016750 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/32px/Rounded Outline 32px - 3x.png
+  artifactKey: Guid(5c49ef3a1a4460b4ca3a969124efb7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/32px/Rounded Outline 32px - 3x.png using Guid(5c49ef3a1a4460b4ca3a969124efb7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c04726b5dc2186265ff596a13b0357e') in 0.015109 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/32px/Rounded Outline 32px - 5x.png
+  artifactKey: Guid(de5e4751c3719944aa6704fc67511221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/32px/Rounded Outline 32px - 5x.png using Guid(de5e4751c3719944aa6704fc67511221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43142824068b84ae77de3eb28287ae51') in 0.015355 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.105735 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Filled 128px.png
+  artifactKey: Guid(5618123237d1d3f49a5a6025287065f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Filled 128px.png using Guid(5618123237d1d3f49a5a6025287065f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f60262ce5db19c0eca8f844c84f5d32d') in 0.021925 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/_UI/Modern UI Pack/Editor/Icons/Resources Active.png
+  artifactKey: Guid(36de84e0dad7a2e41859e006f6815a6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Editor/Icons/Resources Active.png using Guid(36de84e0dad7a2e41859e006f6815a6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8486e793de3eeb9cb6585b0bfceefc9f') in 0.016240 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/_UI/Modern UI Pack/Editor/Icons/RLG Top Header.png
+  artifactKey: Guid(a64b6c3edb2be98409048516a50d0b32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Editor/Icons/RLG Top Header.png using Guid(a64b6c3edb2be98409048516a50d0b32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c31c53d107d04516dae9b2772a979578') in 0.020336 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/_UI/Modern UI Pack/Editor/Icons/Resources Normal.png
+  artifactKey: Guid(e8a9624a10818bd4eb0b2cee5ad037dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Editor/Icons/Resources Normal.png using Guid(e8a9624a10818bd4eb0b2cee5ad037dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '842d910e030bad46bcccbfdf70d19e33') in 0.022057 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Rounded/512px/Rounded Filled 512px.png
+  artifactKey: Guid(cca3ca807d25c1844b79eeb77e944d05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Rounded/512px/Rounded Filled 512px.png using Guid(cca3ca807d25c1844b79eeb77e944d05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0c0babe2c42bcf2c8502ec6d923b89e') in 0.018033 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000081 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Shadow/Radial Shadow.png
+  artifactKey: Guid(0755a77d5bd80d94eaba57a2d5d0f55e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Shadow/Radial Shadow.png using Guid(0755a77d5bd80d94eaba57a2d5d0f55e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea582706336aa92b937a073e7f694698') in 0.019835 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/refresh.png
+  artifactKey: Guid(6f6a4c6bd7cdc654d9d91f7de72afcb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/refresh.png using Guid(6f6a4c6bd7cdc654d9d91f7de72afcb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dd60e19dc9ee03b78e0767db7537f34') in 0.022922 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.209708 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Radial/512px/Radial Outline 512px - 7x.png
+  artifactKey: Guid(d0173e1ae67fd0d478e000bbe3e38459) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Radial/512px/Radial Outline 512px - 7x.png using Guid(d0173e1ae67fd0d478e000bbe3e38459) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9903bff5e596e1e02c7fb7cecdf8c9f9') in 0.021337 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000090 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Radial/512px/Radial Outline 512px - 10x.png
+  artifactKey: Guid(459e46a077b8afa4d93425018fc7b3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Radial/512px/Radial Outline 512px - 10x.png using Guid(459e46a077b8afa4d93425018fc7b3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d1853327a4b1c02c8332fca3c73373d') in 0.026003 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.026401 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Radial/512px/Radial Outline 512px - 2x.png
+  artifactKey: Guid(0ab11be59df835d4099df401d7420c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Radial/512px/Radial Outline 512px - 2x.png using Guid(0ab11be59df835d4099df401d7420c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a19e207432b0b80683a0b61ab3b18313') in 0.019833 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Radial/512px/Radial Outline 512px - 5x.png
+  artifactKey: Guid(1b43bc290ba48b5468a23b479bea3c76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Radial/512px/Radial Outline 512px - 5x.png using Guid(1b43bc290ba48b5468a23b479bea3c76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '031a29681132d35aa3762109bf515a53') in 0.020079 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.137239 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Radial/256px/Radial Outline 256px - 7x.png
+  artifactKey: Guid(ad22da32cabd2ae4491744654fd3f56b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Radial/256px/Radial Outline 256px - 7x.png using Guid(ad22da32cabd2ae4491744654fd3f56b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a9bd3712a3e52b6f66c578775a1dc2c') in 0.022294 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Radial/256px/Radial Outline 256px - 9x.png
+  artifactKey: Guid(7b5bda73e2462c84baa72be5e1a35668) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Radial/256px/Radial Outline 256px - 9x.png using Guid(7b5bda73e2462c84baa72be5e1a35668) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79dcea138ac7f034d620eb1abad1b68a') in 0.020872 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Radial/32px/Radial Outline 32px - 8x.png
+  artifactKey: Guid(193385f2143dfe14ba7e5bf010526989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Radial/32px/Radial Outline 32px - 8x.png using Guid(193385f2143dfe14ba7e5bf010526989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd528299f450af2247554b779f4cc8915') in 0.019819 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000107 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Radial/64px/Radial Outline 64px - 1x.png
+  artifactKey: Guid(e963dcd72924ca1448e01147b483fb05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Radial/64px/Radial Outline 64px - 1x.png using Guid(e963dcd72924ca1448e01147b483fb05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d843fc48300773cb4e68526cb77ed4d') in 0.017188 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Radial/32px/Radial Outline 32px - 9x.png
+  artifactKey: Guid(eb5b293700185344e9c5653bb0e49c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Radial/32px/Radial Outline 32px - 9x.png using Guid(eb5b293700185344e9c5653bb0e49c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '665612fd1c9c051bc379c16c9ca2f236') in 0.017146 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Radial/128px/Radial Outline 128px - 1x.png
+  artifactKey: Guid(3b01fe90eb34c7c4bab30f287241c158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Radial/128px/Radial Outline 128px - 1x.png using Guid(3b01fe90eb34c7c4bab30f287241c158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1b779cc76072e469225f31e27acad2b') in 0.018883 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Radial/128px/Radial Outline 128px - 4x.png
+  artifactKey: Guid(b8c2bca7139eb5143aeea1c1beba6bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Radial/128px/Radial Outline 128px - 4x.png using Guid(b8c2bca7139eb5143aeea1c1beba6bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f269cf00c7df38d99babdec184c9a74a') in 0.024556 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Radial/128px/Radial Outline 128px - 6x.png
+  artifactKey: Guid(9bf942b0b374f684f924e157d0b4454a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Radial/128px/Radial Outline 128px - 6x.png using Guid(9bf942b0b374f684f924e157d0b4454a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '167f840f37d65249020d6fae9063a6d5') in 0.019086 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Radial/64px/Radial Outline 64px - 8x.png
+  artifactKey: Guid(58ab3b48dda45144499c9531012f013f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Radial/64px/Radial Outline 64px - 8x.png using Guid(58ab3b48dda45144499c9531012f013f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a7173eea5502bb3910093ce649e33eb') in 0.017947 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000092 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Radial/64px/Radial Outline 64px - 10x.png
+  artifactKey: Guid(c50c7c9c8871c91409e4470d3c721189) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Radial/64px/Radial Outline 64px - 10x.png using Guid(c50c7c9c8871c91409e4470d3c721189) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4c9a2c094eaee81ccf0f92b45f7e11f') in 0.017634 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Radial/64px/Radial Outline 64px - 7x.png
+  artifactKey: Guid(3c57ab889c6e61d47a6e1122c011ee85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Radial/64px/Radial Outline 64px - 7x.png using Guid(3c57ab889c6e61d47a6e1122c011ee85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28472bd0f40fbec547e0f7c1abe70c59') in 0.033984 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Radial/32px/Radial Outline 32px - 6x.png
+  artifactKey: Guid(c8d56a8699823ca46aa7eda6801a483e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Radial/32px/Radial Outline 32px - 6x.png using Guid(c8d56a8699823ca46aa7eda6801a483e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '756a94bd72508f8f9a47c5defd84c771') in 0.020798 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000081 seconds.
+  path: Assets/_UI/Modern UI Pack/Textures/Border/Radial/256px/Radial Outline 256px - 10x.png
+  artifactKey: Guid(a09d9ea1d290ec148a3ec65492d3b299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_UI/Modern UI Pack/Textures/Border/Radial/256px/Radial Outline 256px - 10x.png using Guid(a09d9ea1d290ec148a3ec65492d3b299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd29cd0af55c45bac11dd4aa02b494895') in 0.029582 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     public string currLevelName;
     public bool isLoggedIn;
+    public bool isDebug;
 
     private bool tag = true;
 

@@ -2,18 +2,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
-using System;
+using System.Collections;
+using UmbraEvolution.PerLayerCameraCulling;
 
 public class PlayerMovementTutorial : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed;
     public float speedMultiplier;
-    public float jumpForce = 8f;
     public float jumpCooldown;
     public float airMultiplier;
     //public float time;
+    [Header("Curves")]
     public AnimationCurve speedVTime;
+    public AnimationCurve jumpVTime;
+    public AnimationCurve jumpForwardVTime;
 
     bool readyToJump;
 
@@ -51,6 +54,16 @@ public class PlayerMovementTutorial : MonoBehaviour
 
     int mSpeed;
 
+    [HideInInspector]
+    public bool isSide = false;
+
+    private PerLayerCulling pCull;
+    float jumpForce;
+    float i;
+    float j;
+    float k;
+    float multy;
+
     private void Start()
     {
         Application.targetFrameRate = 60;
@@ -69,11 +82,16 @@ public class PlayerMovementTutorial : MonoBehaviour
         restartButton.onClick.AddListener(gameManager.restartGame);
         nextLevelButton.onClick.AddListener(gameManager.nextLevel);
 
-        
+        pCull = GetComponentInChildren<PerLayerCulling>();
     }
 
     bool call = true;
+    bool once = true;
 
+    private void LateUpdate()
+    {
+        pCull.TriggerUpdate();
+    }
     private void Update()
     {
         // ground check
@@ -87,22 +105,44 @@ public class PlayerMovementTutorial : MonoBehaviour
             Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, playerHeight * 0.5f + 0.3f);
             SpeedControl(hit.collider.gameObject);
 
-            Debug.LogError("Speed Maintained");
+            //Debug.LogError("Speed Maintained");
+
+            once = true;
         }
 
         if (!grounded)
         {
             call = true;
+            if (once)
+            {
+                StartCoroutine("DownForce");
+                once = false;
+            }
+            
         }
 
-        stats.text = "Multiplier is:" + multy +"\n" + "Speed is:" + i + "\n" + "JumpMulty is:" + jumpForce;
-        /*
-        if (grounded)
-            rb.drag = groundDrag;
+        if (isSide)
+        {
+            float x = rb.velocity.y - 1;
+            Mathf.Clamp(x, -1, 50);
+            rb.velocity = new Vector3(rb.velocity.x, -1f, rb.velocity.z);
+
+            //Debug.LogError("Speed Negative");
+        }
         else
-            rb.drag = 0;
-        */
+        {
+           // rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+        }
+        stats.text = "Multiplier is:" + multy +"\n" + "Speed is:" + j + "\n" + "JumpMulty is:" + jumpForce;
+
         
+    }
+
+    IEnumerator DownForce()
+    {
+        yield return new WaitForSeconds(1.3f);
+        if(!grounded)
+            rb.AddForce(-40f * transform.up, ForceMode.Force);
     }
 
     private void FixedUpdate()
@@ -110,29 +150,38 @@ public class PlayerMovementTutorial : MonoBehaviour
         MovePlayer();
     }
 
+    private bool hozIn = false;
+    private bool verIn = false;
     private void MyInput()
     {
         horizontalInput = fixedJoystick.Horizontal;
         verticalInput = fixedJoystick.Vertical;
 
+        if(hozIn)
+        {
+            horizontalInput = 0;
+        }
+        if (verIn)
+        {
+            verticalInput = 0;
+        }
     }
+
+  
 
     public void JumpCommand()
     {
-        if (readyToJump && grounded)
+        if ((readyToJump && grounded) || isSide)
         {
             readyToJump = false;
 
-            Jump();
+            Jump(isSide);
+            isSide = false;
 
             //print("JUMPING");
             Invoke(nameof(ResetJump), jumpCooldown);
         }
     }
-
-    //VARAIBLES
-    float i;
-    float multy;
 
     private void MovePlayer()
     {
@@ -180,32 +229,35 @@ public class PlayerMovementTutorial : MonoBehaviour
                 Vector3 speed = colliderObj.transform.parent.GetComponent<TruckPathFollow>().movementSpeed;
                 rb.velocity = new Vector3(speed.x, rb.velocity.y, speed.z);
             }
+            if(colliderObj.transform.name == "SideFrontCollider")
+            {
+                isSide = true;
+                Debug.LogError("Side Jump");
+            }
         }
-
-
-        //print(flatVel.magnitude);
-        //limit velocity if needed
-        /*
-        if (flatVel.magnitude > 60f)
-        {
-            print("Hmm");
-            Vector3 limitedVel = flatVel.normalized * moveSpeed;
-            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
-        }
-        */
 
     }
 
-    private void Jump()
+    
+
+    private void Jump(bool sideTouch)
     {
         // reset y velocity
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
-        i = rb.velocity.magnitude;
-        //jumpForce = Mathf.Clamp(speedVTime.Evaluate(i)/2, 4.5f, 7f);
+        j = rb.velocity.magnitude;
+        jumpForce = Mathf.Clamp(jumpVTime.Evaluate(j), 10.3f, 40f);
+        k = Mathf.Clamp(jumpForwardVTime.Evaluate(jumpForce), 1f, 5f);
 
-        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-        rb.AddForce(transform.forward * jumpForce, ForceMode.Impulse);
+        if (isSide)
+        {
+            rb.AddForce(transform.up * jumpForce * 1.05f, ForceMode.Impulse);
+        }
+        else
+        {
+            rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+        }
+        rb.AddForce(transform.forward * jumpForce * k , ForceMode.Impulse);
     }
     private void ResetJump()
     {
@@ -224,7 +276,32 @@ public class PlayerMovementTutorial : MonoBehaviour
             }
 
             deathPanel.SetActive(true);
+        }
+    }
 
+    private void OnTriggerStay(Collider collision)
+    {
+        if (collision.gameObject.name == "SideFrontCollider")
+        {
+            rb.velocity = new Vector3(rb.velocity.x, -2, rb.velocity.z);
+            hozIn = true;
+        }
+        if (collision.gameObject.name == "FrontCollider")
+        {
+            rb.velocity = new Vector3(rb.velocity.x, -2, rb.velocity.z);
+            verIn = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider collision)
+    {
+        if (collision.gameObject.name == "SideFrontCollider")
+        {
+            hozIn = false;
+        }
+        if (collision.gameObject.name == "FrontCollider")
+        {
+            verIn = false;
         }
     }
 
